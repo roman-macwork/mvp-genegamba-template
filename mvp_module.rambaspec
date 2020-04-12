@@ -11,17 +11,14 @@ code_files:
 # Configurator
 - {name: Configurator/ModuleConfigurator.swift, path: Code/Configurator/module_configurator.swift.liquid}
 
-# Router layer
-- {name: Router/Router.swift, path: Code/Router/router.swift.liquid}
-- {name: Router/RouterInput.swift, path: Code/Router/router_input.swift.liquid}
+# Model layer
+- {name: Model/ }
+
+# View layer
+- {name: View/ViewController.swift, path: Code/View/view_controller.swift.liquid}
+- {name: View/ViewController.xib, path: Code/View/view_controller.xib.liquid}
 
 # Presenter layer
 - {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
 - {name: Presenter/ModuleInput.swift, path: Code/Presenter/module_input.swift.liquid}
 - {name: Presenter/ModuleOutput.swift, path: Code/Presenter/module_output.swift.liquid}
-
-# View layer
-- {name: View/ViewController.swift, path: Code/View/view_controller.swift.liquid}
-- {name: View/ViewController.storyboard, path: Code/View/view_controller.storyboard.liquid}
-- {name: View/ViewInput.swift,  path: Code/View/view_input.swift.liquid}
-- {name: View/ViewOutput.swift, path: Code/View/view_output.swift.liquid}

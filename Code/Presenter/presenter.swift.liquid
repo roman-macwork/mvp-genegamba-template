@@ -6,20 +6,23 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-final class {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput, {{ module_info.name }}ModuleInput {
+import Foundation
 
-    // MARK: - Properties
+protocol {{ module_info.name }}ViewOutput {
+    func viewLoaded()
+}
 
+final class {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput {
+    
     weak var view: {{ module_info.name }}ViewInput?
-    var router: {{ module_info.name }}RouterInput?
-    var output: {{ module_info.name }}ModuleOutput?
+    
+}
 
-    // MARK: - {{ module_info.name }}ViewOutput
-
+//MARK:- {{ module_info.name }}ViewOutput
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
+    
     func viewLoaded() {
         view?.setupInitialState()
     }
-
-    // MARK: - {{ module_info.name }}ModuleInput
-
+    
 }

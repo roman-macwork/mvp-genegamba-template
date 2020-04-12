@@ -8,23 +8,28 @@
 
 import UIKit
 
-final class {{ module_info.name }}ViewController: UIViewController, {{ module_info.name }}ViewInput, ModuleTransitionable {
+protocol {{ module_info.name }}ViewInput: class {
+    func setupInitialState()
+}
 
-    // MARK: - Properties
-
+final class {{ module_info.name }}ViewController: UIViewController {
+    
     var output: {{ module_info.name }}ViewOutput?
 
     // MARK: - UIViewController
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         output?.viewLoaded()
     }
 
-    // MARK: - {{ module_info.name }}ViewInput
+}
 
+// MARK: - {{ module_info.name }}ViewInput
+extension {{ module_info.name }}ViewController: {{ module_info.name }}ViewInput {
+    
     func setupInitialState() {
 
     }
-
+    
 }
