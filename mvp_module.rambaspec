@@ -20,5 +20,3 @@ code_files:
 
 # Presenter layer
 - {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
-- {name: Presenter/ModuleInput.swift, path: Code/Presenter/module_input.swift.liquid}
-- {name: Presenter/ModuleOutput.swift, path: Code/Presenter/module_output.swift.liquid}
