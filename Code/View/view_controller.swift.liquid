@@ -14,13 +14,13 @@ protocol {{ module_info.name }}ViewInput: class {
 
 final class {{ module_info.name }}ViewController: UIViewController {
     
-    var output: {{ module_info.name }}ViewOutput?
+    var presenter: {{ module_info.name }}ViewOutput?
 
     // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        output?.viewLoaded()
+        presenter?.viewLoaded()
     }
 
 }
